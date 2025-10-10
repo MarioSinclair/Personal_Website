@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing my work as a Computer Science student and researcher. Built with React, featuring a dark theme with animated gradients, Framer Motion animations, and interactive elements.
 
-[View Portfolio](https://your-portfolio-url.com) 
+[View Portfolio](https://mariosinclaircodes.vercel.app/) 
 
 ## ✨ Features
 
