@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing my work as a Computer Science student and researcher. Built with React, featuring a dark theme with animated gradients, Framer Motion animations, and interactive elements.
 
-[View Portfolio](https://your-portfolio-url.com) *(Add your deployed URL here)*
+[View Portfolio](https://your-portfolio-url.com) 
 
 ## ✨ Features
 
@@ -26,8 +26,3 @@ A modern, responsive portfolio website showcasing my work as a Computer Science 
 
 - **Resume**: [Download PDF](src/assets/Mario_Sinclair_Resume.pdf)
 - **LinkedIn**: [Connect with me](https://www.linkedin.com/in/mario-sinclair/)
-- **GitHub**: [View my code](https://github.com/MarioSinclair)
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
