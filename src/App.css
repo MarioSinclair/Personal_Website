@@ -793,6 +793,16 @@ section {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .hero-image {
+    order: -1;
+  }
+  
+  .hero-content {
+    order: 1;
   }
   
   .hero-title {
@@ -827,7 +837,13 @@ section {
   }
   
   .profile-icon {
-    font-size: 4rem;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .about-placeholder {
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -850,5 +866,20 @@ section {
   
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .profile-placeholder {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .profile-icon {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .about-placeholder {
+    width: 180px;
+    height: 180px;
   }
 }
