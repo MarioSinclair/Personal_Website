@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     const options = {
       strings: [
-        "Hi, I'm <span class='highlight'>Mario</span>",
+        "Hey, I'm <span class='highlight'>Mario</span>",
       ],
       typeSpeed: 50,
       showCursor: true,
@@ -79,7 +79,7 @@ function App() {
             <h2 className="hero-subtitle">Computer Science Student</h2>
             <p className="hero-description">
               I am a Junior pursuing a Bachelor of Science in Computer Science at the University of South Florida. 
-              Passionate about developing impactful solutions that bridge technology, collaboration, and innovation.
+              Passionate about autonomous robotics and AI.
             </p>
             <div className="hero-buttons">
               <motion.a 
