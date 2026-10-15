@@ -1,0 +1,52 @@
+.hero { padding-block: 26px 80px; position: relative; overflow: hidden }
+.strip { display: flex; justify-content: space-between; gap: 8px 18px; flex-wrap: wrap; font: 500 12.5px/1.2 var(--f-mono); letter-spacing: 0.14em; color: var(--sign); text-transform: uppercase; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 14px }
+.strip .clock { color: #fff }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 44px; align-items: start; margin-top: 34px }
+.hero-name { font-size: clamp(40px, 7.2vw, 92px); display: grid; gap: 0.08em; margin: 0 }
+.hero-tag { font: 500 clamp(17px, 2vw, 21px)/1.5 var(--f-body); color: #cdd5e3; margin: 20px 0 0; max-width: 48ch; text-wrap: pretty }
+.hero-tag b { color: #fff; font-weight: 600 }
+.hero-ctas { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px }
+.hero-social { display: flex; gap: 6px; align-items: center }
+.icon-link { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 8px; border: 1px solid var(--line); color: #dfe4ec; transition: color 0.2s, border-color 0.2s }
+.icon-link:hover { color: var(--sign); border-color: rgba(255, 210, 0, 0.5) }
+.icon-link svg { width: 20px; height: 20px }
+
+.board { margin-top: 32px; background: var(--board); border-radius: 12px; padding: 12px 14px 6px; border: 1px solid var(--line); box-shadow: 0 30px 60px -30px #000 }
+.board-head, .board-row { display: grid; grid-template-columns: 4.6em minmax(0, 1fr) 4.4em 7.6em; gap: 12px; align-items: center }
+.board-head { font: 500 10.5px/1 var(--f-mono); letter-spacing: 0.16em; color: var(--sign); padding: 4px 0 10px; text-transform: uppercase }
+.board-row { padding: 8px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); font-size: 17px }
+.board-row .dest { font: 600 17px/1.15 var(--f-display); letter-spacing: 0.03em; text-transform: uppercase; min-width: 0 }
+.board-row .dest small { display: block; font: 400 13px/1.3 var(--f-body); letter-spacing: 0; text-transform: none; color: var(--dim) }
+.board-row .gate { font: 500 13px var(--f-mono); color: #cfd6e2 }
+.board-row .status .flap { width: 0.62em }
+
+.hero-side { display: grid; gap: 16px }
+.passport { position: relative; background: linear-gradient(155deg, rgba(34, 48, 80, 0.5), #141c30), var(--navy-2); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 18px; box-shadow: 0 30px 70px -30px #000; overflow: hidden }
+.passport::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: repeating-radial-gradient(circle at 120% -20%, transparent 0 14px, rgba(255, 255, 255, 0.025) 14px 15px) }
+.pp-head { display: flex; justify-content: space-between; font: 500 10.5px/1 var(--f-mono); letter-spacing: 0.18em; color: var(--sign); text-transform: uppercase }
+.pp-body { display: grid; grid-template-columns: 118px minmax(0, 1fr); gap: 16px; margin-top: 16px }
+.pp-photo { width: 118px; height: 148px; object-fit: cover; object-position: 50% 38%; border-radius: 6px; filter: saturate(0.88) contrast(1.05) }
+.pp-fields { display: grid; gap: 8px; align-content: start; min-width: 0; margin: 0 }
+.pp-fields div { min-width: 0 }
+.pp-fields dt { font: 500 9.5px/1.2 var(--f-mono); letter-spacing: 0.16em; color: var(--dim); text-transform: uppercase }
+.pp-fields dd { margin: 1px 0 0; font: 600 16px/1.15 var(--f-display); letter-spacing: 0.05em; text-transform: uppercase; color: #fff }
+.pp-mrz { margin-top: 16px; font: 500 11.5px/1.45 var(--f-mono); letter-spacing: 0.16em; color: #c3cbd9; overflow-wrap: anywhere; opacity: 0.85 }
+.pp-stamp { position: absolute; right: 18px; top: 84px; width: 106px; height: 106px; border: 3px double var(--stamp); color: var(--stamp); border-radius: 50%; display: grid; place-items: center; text-align: center; font: 700 13px/1.05 var(--f-display); letter-spacing: 0.1em; text-transform: uppercase; transform: rotate(-14deg); opacity: 0.92; pointer-events: none; z-index: 1 }
+.pp-stamp em { display: block; font-style: normal; font-size: 22px; letter-spacing: 0.04em }
+
+.counter { background: var(--board); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap }
+.counter .lbl { font: 500 10.5px/1.4 var(--f-mono); letter-spacing: 0.16em; color: var(--sign); text-transform: uppercase }
+.counter .lbl small { display: block; color: var(--dim); letter-spacing: 0.1em }
+.counter .flaps { font-size: 30px }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr }
+}
+@media (max-width: 560px) {
+  .board-head, .board-row { grid-template-columns: 4em minmax(0, 1fr) 6.8em }
+  .board-head .g, .board-row .gate { display: none }
+  .pp-body { grid-template-columns: 96px minmax(0, 1fr) }
+  .pp-photo { width: 96px; height: 124px }
+  .pp-stamp { width: 82px; height: 82px; top: auto; bottom: 8px; right: 10px; font-size: 11px }
+  .pp-stamp em { font-size: 18px }
+}
