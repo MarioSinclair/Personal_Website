@@ -3,7 +3,11 @@ import { gsap, useGsap, reveal } from '../lib/motion';
 import { experience } from '../data/content';
 import { barcodeStyle } from '../lib/barcode';
 import { Plane } from './Icons';
+import deltaLogo from '../assets/logos/delta.svg';
+import rareLogo from '../assets/logos/rare-lab.webp';
+import rasLogo from '../assets/logos/ieee-ras.webp';
 
+const LOGOS = { delta: deltaLogo, rare: rareLogo, ras: rasLogo };
 const STAMP = { landed: 'Landed', inflight: 'In flight', boarding: 'Boarding' };
 const PLANE_AT = { landed: 100, inflight: 62, boarding: 10 };
 
@@ -11,7 +15,10 @@ function BoardingPass({ job }) {
   return (
     <article className="pass" data-plane={PLANE_AT[job.state]}>
       <div className="pass-main">
-        <div className="pass-top"><span>Boarding pass · {job.flight}</span><span>{job.org}</span></div>
+        <div className="pass-top">
+          {job.logo && <img className={`pass-logo ${job.logo}`} src={LOGOS[job.logo]} alt="" />}
+          <div className="pass-top-text"><span>Boarding pass · {job.flight}</span><span>{job.org}</span></div>
+        </div>
         <div className="pass-route" aria-label={job.dates}>
           <span>{job.from}</span>
           <span className="path"><Plane style={{ left: `${PLANE_AT[job.state]}%` }} /></span>

@@ -94,8 +94,10 @@ export default function Hero({ visitors }) {
                   <div><dt>Languages</dt><dd>English · Japanese</dd></div>
                 </dl>
               </div>
-              <div className="pp-mrz" aria-hidden="true">P&lt;USF&lt;SINCLAIR&lt;&lt;MARIO&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br />CS2027&lt;&lt;GPA3&lt;81&lt;&lt;KIN&lt;TPA&lt;&lt;&lt;&lt;&lt;&lt;</div>
-              <div className="pp-stamp" aria-label="Dean's list three times">Dean's list<em>×3</em>USF</div>
+              <div className="pp-foot">
+                <div className="pp-mrz" aria-hidden="true">P&lt;USF&lt;SINCLAIR&lt;&lt;MARIO&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br />CS2027&lt;&lt;GPA3&lt;81&lt;&lt;KIN&lt;TPA&lt;&lt;&lt;&lt;&lt;&lt;</div>
+                <div className="pp-stamp" aria-label="Dean's list three times">Dean's list<em>×3</em>USF</div>
+              </div>
             </div>
 
             {visitors.status !== 'off' && (
