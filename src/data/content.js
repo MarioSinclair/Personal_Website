@@ -48,12 +48,12 @@ export const experience = [
     from: 'May 26', to: 'Aug 26', dates: 'May to Aug 2026', gate: 'Atlanta, GA', seat: 'Data Eng', extra: ['Fleet', '900+ aircraft'],
     group: 'Summer', state: 'landed',
     highlights: [
-      'Built and maintained SQL ELT pipelines in Palantir Foundry for maintenance data across 900+ aircraft.',
-      'Built a Python data validation framework (schema, null and anomaly checks) that catches bad records before they reach reports.',
-      'Built SQL data models in Skywise Contour behind Power BI dashboards used by engineering directors, cutting query time by 30%.',
+      'Built SQL ELT pipelines in Palantir Foundry for maintenance data across 900+ aircraft.',
+      'Built SQL data models behind Power BI dashboards for engineering directors, cutting query time by 30%.',
       'Wrote a TypeScript automation that replaced a manual aircraft-bridging workflow, saving about 15 hours a week.',
     ],
     more: [
+      'Built a Python data validation framework (schema, null and anomaly checks) that catches bad records before they reach reports.',
       'Migrated three Skywise dashboards (Line Maintenance, Cabin Maintenance, OSR) after their source table was replaced, rewriting the SQL and reconciling every metric against historical results.',
       'Extended a GTF/APU engine status report (Power Automate, Office Scripts) to also track CFM56-7B and CFM56-5B engines.',
       'Rebuilt a broken maintenance programs report in Pipeline Builder, joining in alternate stock numbers from component relationship datasets.',
@@ -68,9 +68,9 @@ export const experience = [
     from: 'Sep 25', to: 'Now', dates: 'Sep 2025 to now', gate: 'Tampa, FL', seat: 'Research', extra: ['Robots', 'Go2 · Fetch · R1'],
     group: 'Research', state: 'inflight',
     highlights: [
-      'Building projected AR with CompenHR (deep-learning projector compensation) so images display correctly on non-planar surfaces, mounted on a Fetch, a Unitree Go2 and a Unitree R1 to generalize across robots with different heights and gaits.',
-      'Built a ROS2/Nav2 navigation stack on a Unitree Go2 robot dog (Python launch files, C++ code that sends goal poses with feedback), tuned costmaps and speed, and reached 70% success across 10 physical-robot trials.',
-      'Wrote a C++ ROS1 action server and client with a custom .action file that moves the Fetch robot a set distance using odometry, tested in Gazebo before the real robot.',
+      'Building projected AR (CompenHR projector compensation) for uneven surfaces, mounted on a Fetch, a Unitree Go2 and a Unitree R1.',
+      'Built a ROS2/Nav2 navigation stack on a Unitree Go2 robot dog, reaching 70% success across 10 physical-robot trials.',
+      'Wrote a C++ ROS1 action server and client that moves the Fetch a set distance using odometry, tested in Gazebo first.',
     ],
     more: [
       'Debugged CycloneDDS/UDP networking between the Go2’s onboard Jetson and lab machines, and containerized remote RViz2 with Docker over SSH.',
@@ -83,9 +83,9 @@ export const experience = [
     from: 'Aug 26', to: 'Now', dates: 'Aug 2026 to now', gate: 'Tampa, FL', seat: 'Software', extra: ['Phase', 'Design'],
     group: 'Design', state: 'boarding',
     highlights: [
-      'Leading the software architecture for an autonomous lunar excavation robot, with a software team of about 5.',
-      'Helped define the software subsystem breakdown and requirements (3 modules, 9 units) and designed the ROS 2 node and topic graph.',
-      'Drove the key design decisions: ROS 2 Humble on a Jetson Orin Nano Super, a Teensy 4.1 over micro-ROS for motor control, a Livox Mid-360 LiDAR with FAST-LIO2 SLAM, Nav2, RealSense depth cameras for rock and crater detection, and Gazebo Fortress simulation.',
+      'Leading software architecture for an autonomous lunar excavation robot, with a team of about 5.',
+      'Helped define the software subsystems (3 modules, 9 units) and designed the ROS 2 node and topic graph.',
+      'Drove the core stack decisions: ROS 2 on a Jetson Orin Nano Super, micro-ROS motor control, FAST-LIO2 LiDAR SLAM and Gazebo simulation.',
     ],
     more: [],
     stack: ['ROS 2 Humble', 'micro-ROS', 'FAST-LIO2', 'Nav2', 'RealSense', 'Gazebo Fortress'],
@@ -176,12 +176,6 @@ export const projects = [
   },
 ];
 
-export const otherFlights = [
-  { name: 'ML from scratch', text: 'Neural network from scratch (96.9% validation accuracy), CycleGAN, a conditional diffusion model evaluated with FID/IS, and language model training experiments.' },
-  { name: 'GTSAM localization', text: 'Autonomous vehicle localization with a C++ factor graph and Levenberg-Marquardt optimization.' },
-  { name: 'MSP430 motor control', text: 'Bluetooth motor control with an I2C LCD on a TI MSP430 (PWM, UART, C and MSP430 assembly).' },
-  { name: 'MyFitness', text: 'Full-stack fitness tracker: React, Node.js/Express REST API, MySQL and user authentication.' },
-];
 
 export const crew = [
   {
@@ -198,11 +192,3 @@ export const crew = [
   },
 ];
 
-export const baggage = [
-  { tag: 'LNG', label: 'Languages', items: ['Python', 'C++', 'C', 'TypeScript', 'JavaScript', 'SQL', 'R', 'Bash', 'HTML/CSS', 'MSP430 Assembly'] },
-  { tag: 'DAT', label: 'Data', items: ['Palantir Foundry', 'Pipeline Builder', 'Skywise', 'Databricks', 'PySpark', 'Apache Airflow', 'PostgreSQL', 'MySQL', 'Power BI', 'Tableau', 'pandas', 'NumPy'] },
-  { tag: 'WEB', label: 'Web + backend', items: ['React', 'Node.js', 'Express', 'Flask', 'FastAPI', 'REST APIs', 'Supabase', 'MapLibre GL'] },
-  { tag: 'AIM', label: 'AI / ML', items: ['PyTorch', 'YOLO', 'OpenCV', 'LoRA fine-tuning', 'Claude API (tool use)', 'LLM agents + evaluation', 'Claude Code', 'Kiro'] },
-  { tag: 'BOT', label: 'Robotics + embedded', items: ['ROS1', 'ROS2', 'Nav2', 'SLAM', 'Gazebo', 'micro-ROS', 'Jetson', 'ESP32', 'Raspberry Pi', 'MSP430'] },
-  { tag: 'OPS', label: 'Tools', items: ['Git', 'GitHub Actions', 'Docker', 'Linux', 'AWS (EC2, S3, Lambda)', 'Power Automate', 'Vercel', 'Render'] },
-];

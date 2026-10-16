@@ -13,7 +13,6 @@ My personal site, themed as an airport departures hall. My name flips in on a sp
 | Experience | Boarding passes stamped Landed / In flight / Boarding |
 | Projects | Self-service kiosk: press a button, a ticket prints |
 | Leadership | Crew ID badges on lanyards |
-| Skills | Baggage claim carousel |
 | Travel | Route map (world / North America), arrivals and departures boards, trip photos |
 | Contact | "Final call" board, email, LinkedIn, GitHub, résumé |
 
@@ -31,7 +30,7 @@ npm run build
 
 ## Editing content
 
-- Experience, projects, leadership, skills: `src/data/content.js`
+- Experience, projects, leadership: `src/data/content.js`
 - Cities and upcoming trips: `src/data/travel.js`
 - Résumé: replace `public/Mario_Sinclair_Resume.pdf`
 

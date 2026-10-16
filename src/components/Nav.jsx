@@ -8,7 +8,6 @@ const LINKS = [
   ['experience', 'Experience'],
   ['projects', 'Projects'],
   ['crew', 'Crew'],
-  ['baggage', 'Skills'],
   ['travel', 'Travel'],
 ];
 

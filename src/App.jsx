@@ -7,7 +7,6 @@ import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Crew from './components/Crew';
-import Baggage from './components/Baggage';
 import Travel from './components/Travel';
 import Contact, { Footer } from './components/Contact';
 
@@ -25,7 +24,6 @@ export default function App() {
         <Experience />
         <Projects />
         <Crew />
-        <Baggage />
         <Travel />
         <Contact />
       </main>
