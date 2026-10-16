@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap, useGsap, reveal, prefersReducedMotion, scrollToId } from '../lib/motion';
-import { projects, otherFlights } from '../data/content';
+import { projects } from '../data/content';
 import { barcodeStyle } from '../lib/barcode';
 import { Arrow } from './Icons';
 import nsbe from '../assets/img/nsbe-site.webp';
@@ -37,7 +37,6 @@ export default function Projects() {
 
   useGsap(root, () => {
     reveal('.section-head, .kiosk', { stagger: 0.08 });
-    reveal('.other-flights li', { stagger: 0.05, y: 24 });
   });
 
   // printer feed: the new ticket steps down out of the slot
@@ -87,11 +86,6 @@ export default function Projects() {
             </div>
             <p className="sr-only" aria-live="polite">Showing {projects[index].name}</p>
           </div>
-        </div>
-
-        <div className="other-flights">
-          <div className="eyebrow">Other flights</div>
-          <ul>{otherFlights.map((f) => <li key={f.name}><b>{f.name}</b><span>{f.text}</span></li>)}</ul>
         </div>
       </div>
     </section>
