@@ -46,7 +46,7 @@ export const experience = [
   {
     id: 'delta', flight: 'MS 26', org: 'Delta Air Lines', role: 'Data Engineering Intern', team: 'Compliance System Management',
     from: 'May 26', to: 'Aug 26', dates: 'May to Aug 2026', gate: 'Atlanta, GA', seat: 'Data Eng', extra: ['Fleet', '900+ aircraft'],
-    group: 'Summer', state: 'landed',
+    group: 'Summer', state: 'landed', logo: 'delta',
     highlights: [
       'Built SQL ELT pipelines in Palantir Foundry for maintenance data across 900+ aircraft.',
       'Built SQL data models behind Power BI dashboards for engineering directors, cutting query time by 30%.',
@@ -66,7 +66,7 @@ export const experience = [
   {
     id: 'rare', flight: 'MS 25', org: 'USF RARE Lab', role: 'Undergraduate Research Assistant', team: 'Reality, Autonomy and Robot Experience Lab',
     from: 'Sep 25', to: 'Now', dates: 'Sep 2025 to now', gate: 'Tampa, FL', seat: 'Research', extra: ['Robots', 'Go2 · Fetch · R1'],
-    group: 'Research', state: 'inflight',
+    group: 'Research', state: 'inflight', logo: 'rare',
     highlights: [
       'Building projected AR (CompenHR projector compensation) for uneven surfaces, mounted on a Fetch, a Unitree Go2 and a Unitree R1.',
       'Built a ROS2/Nav2 navigation stack on a Unitree Go2 robot dog, reaching 70% success across 10 physical-robot trials.',
@@ -81,7 +81,7 @@ export const experience = [
   {
     id: 'lunabotics', flight: 'MS 26', org: 'NASA Lunabotics · IEEE RAS', role: 'Software Team, Architecture Lead', team: 'Autonomous lunar excavation robot',
     from: 'Aug 26', to: 'Now', dates: 'Aug 2026 to now', gate: 'Tampa, FL', seat: 'Software', extra: ['Phase', 'Design'],
-    group: 'Design', state: 'boarding',
+    group: 'Design', state: 'boarding', logo: 'ras',
     highlights: [
       'Leading software architecture for an autonomous lunar excavation robot, with a team of about 5.',
       'Helped define the software subsystems (3 modules, 9 units) and designed the ROS 2 node and topic graph.',
