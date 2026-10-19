@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap, useGsap, reveal, prefersReducedMotion, scrollToId } from '../lib/motion';
 import { projects } from '../data/content';
 import { barcodeStyle } from '../lib/barcode';
-import { Arrow } from './Icons';
+import { Arrow, Trophy } from './Icons';
 import nsbe from '../assets/img/nsbe-site.webp';
 import '../styles/kiosk.css';
 
@@ -14,6 +14,12 @@ function Ticket({ project, index }) {
       <div className="t-top"><span>Ticket · MS-PRJ-{String(index + 1).padStart(2, '0')}</span><span>{project.context} · {project.when}</span></div>
       <div className="t-name"><h3>{project.name}</h3><span className={`t-badge ${project.kind}`}>{project.badge}</span></div>
       <p className="t-tagline">{project.tagline}</p>
+      {project.prize && (
+        <div className="t-prize">
+          <Trophy />
+          <div><b>{project.prize.title}</b><span>{project.prize.detail}</span></div>
+        </div>
+      )}
       {project.image && <img className="t-shot" src={SHOTS[project.image]} alt={`Screenshot of ${project.name}`} loading="lazy" />}
       <ul className="t-points">{project.points.map((p) => <li key={p}>{p}</li>)}</ul>
       {project.note && <p className="t-note">{project.note}</p>}
@@ -68,11 +74,13 @@ export default function Projects() {
             <div className="kiosk-screen"><span>Select a project</span><span>{projects.length} available</span></div>
             <div className="kiosk-buttons">
               {projects.map((p) => (
-                <button key={p.id} type="button" className="kbtn" aria-pressed={p.id === active} aria-controls="ticket-tray" onClick={() => print(p.id)}>
+                <button key={p.id} type="button" className={`kbtn${p.featured ? ' featured' : ''}`} aria-pressed={p.id === active} aria-controls="ticket-tray" onClick={() => print(p.id)}>
                   <span className="code">{p.code}</span>
                   <span className="name">{p.name}</span>
                   <span className="tag">{p.tagline}</span>
+                  {p.featured && p.prize && <span className="prize">{p.prize.short}</span>}
                   <span className={`badge ${p.kind}`}>{p.badge}</span>
+                  {p.featured && <Trophy className="feat-icon" />}
                 </button>
               ))}
             </div>

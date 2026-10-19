@@ -43,7 +43,7 @@ const CAPTIONS = {
 const found = import.meta.glob('../assets/travel/*/*.{jpg,jpeg,png,webp,avif}', { eager: true, import: 'default' });
 
 export const PHOTOS = [
-  { code: 'HND', src: fujiPhoto, caption: 'Tokyo' },
+  { code: 'HND', src: fujiPhoto, caption: 'Japan' },
   ...Object.entries(found).map(([path, src]) => {
     const [, code, file] = path.match(/travel\/([A-Z]{3})\/(.+)$/) || [];
     return { code, src, caption: CAPTIONS[`${code}/${file}`] || '' };

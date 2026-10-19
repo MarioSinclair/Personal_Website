@@ -35,6 +35,7 @@ export const profile = {
 
 // Hero status board
 export const statusBoard = [
+  { flight: 'MS26', dest: 'SwampHacks XII', sub: 'Won with Haven at UF’s largest hackathon', gate: 'GNV', status: 'WINNER', tone: 'y' },
   { flight: 'MS26', dest: 'Delta Air Lines', sub: 'Data engineering intern · May to Aug 2026', gate: 'ATL', status: 'LANDED', tone: 'g' },
   { flight: 'MS25', dest: 'USF RARE Lab', sub: 'Robotics research · Sep 2025 to now', gate: 'TPA', status: 'IN FLIGHT', tone: 'y' },
   { flight: 'MS26', dest: 'NASA Lunabotics', sub: 'Leading software architecture · design phase', gate: 'TPA', status: 'BOARDING', tone: 'y', blink: true },
@@ -95,6 +96,22 @@ export const experience = [
 // Projects for the ticket kiosk. kind: live | award | progress | build
 export const projects = [
   {
+    id: 'haven', code: 'HVN', name: 'Haven', tagline: 'Post-mastectomy rehab coach', when: 'Oct 2026', context: 'SwampHacks XII', kind: 'award', badge: 'Winner', featured: true,
+    prize: { title: 'Winner · SwampHacks XII', detail: 'University of Florida’s largest hackathon · MLH Prize: Best Use of Tiger Data', short: 'SwampHacks XII · UF’s largest hackathon' },
+    points: [
+      'A rehab coach for recovering at home after a mastectomy: a laptop camera and an ESP32 armband track arm range live, hold patients to their physical therapist’s limits, and coach by voice.',
+      'Camera coach on MediaPipe Pose in the browser: measures the upper arm against the trunk, counts reps across 6 exercises, enforces the PT’s limit with a beep and voice cue, flags shrugging, leaning and a bent elbow, and falls back to the armband’s 20 Hz Bluetooth stream when the camera loses the arm.',
+      'Express API with Auth0 patient and clinician roles on Tiger Data: the 20 Hz band stream, reps and daily use are hypertables, dashboard rollups are real-time continuous aggregates, and older data moves to the columnstore.',
+      'PT console with rule-based flags (range drops, pain, swelling, cording, missed sessions). Gemini writes the report from computed stats, and every number in its prose is checked before it is shown. 86 automated tests, deployed on Vercel.',
+    ],
+    stack: ['MediaPipe', 'React', 'TypeScript', 'Express', 'Tiger Data', 'Auth0', 'Gemini', 'ESP32-S3'],
+    links: [
+      { label: 'Devpost', href: 'https://devpost.com/software/haven-xuzh06' },
+      { label: 'havenn.health', href: 'https://havenn.health' },
+      { label: 'GitHub', href: 'https://github.com/MarioSinclair/Haven' },
+    ],
+  },
+  {
     id: 'sherpa', code: 'SHP', name: 'Sherpa', tagline: 'Safe night-walking navigation', when: 'Sep 2026', context: 'HackGT 2026', kind: 'live', badge: 'Live',
     points: [
       'Custom weighted Dijkstra routing over a 10,600-edge campus graph (OSMnx, NetworkX), built from 3,637 streetlights, 806 sidewalk segments, 307 ADA entrances and 122 emergency towers in Georgia Tech GIS data.',
@@ -107,12 +124,18 @@ export const projects = [
     links: [{ label: 'Live site', href: 'https://appsherpa.tech' }, { label: 'GitHub', href: 'https://github.com/MarioSinclair/Sherpa' }],
   },
   {
-    id: 'triagebot', code: 'TRG', name: 'TriageBot', tagline: 'LLM agent for bug triage', when: 'Oct 2026', context: 'Research lab tooling', kind: 'build', badge: 'New',
+    id: 'nsbe', code: 'NSB', name: 'USF NSBE Website', tagline: 'Chapter site for 300+ members', when: 'Jan 2025 to now', context: 'NSBE at USF', kind: 'live', badge: 'Live', image: 'nsbe',
+    points: ['Led a 2-person team building the site for a 300+ member chapter, with continuous deployment on Vercel.'],
+    stack: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+    links: [{ label: 'usfnsbe.com', href: 'https://www.usfnsbe.com/' }, { label: 'GitHub', href: 'https://github.com/MarioSinclair/NSBE-LandingPage' }],
+  },
+  {
+    id: 'equibull', code: 'EQB', name: 'EquiBull AI', tagline: 'Credit readiness platform', when: 'Oct 2025', context: 'InnoTech AI Hackathon (NSBE 2025)', kind: 'award', badge: '2nd place',
     points: [
-      'LLM agent with tool use on the Claude API that sorts a research lab’s GitHub issues by category (3D CAD, electrical, paperwork, documentation, software) and severity, and flags duplicates.',
-      'Tested on about 300 closed issues: 78% top-1 and 80% top-3 category accuracy, 97% duplicate detection.',
+      'Credit readiness platform built on 1,000+ HMDA mortgage records (Python, R), with a fine-tuned Gemini 2.5 Flash model on Vertex AI and Tableau/Power BI dashboards.',
+      'I worked on the data pipeline, model fine-tuning and API integration.',
     ],
-    stack: ['Claude API', 'Tool use', 'LLM evaluation'],
+    stack: ['Python', 'R', 'Gemini 2.5 Flash', 'Vertex AI', 'Tableau', 'Power BI'],
     links: [],
   },
   {
@@ -127,12 +150,12 @@ export const projects = [
     links: [],
   },
   {
-    id: 'equibull', code: 'EQB', name: 'EquiBull AI', tagline: 'Credit readiness platform', when: 'Oct 2025', context: 'InnoTech AI Hackathon (NSBE 2025)', kind: 'award', badge: '2nd place',
+    id: 'triagebot', code: 'TRG', name: 'TriageBot', tagline: 'LLM agent for bug triage', when: 'Oct 2026', context: 'Research lab tooling', kind: 'build', badge: 'New',
     points: [
-      'Credit readiness platform built on 1,000+ HMDA mortgage records (Python, R), with a fine-tuned Gemini 2.5 Flash model on Vertex AI and Tableau/Power BI dashboards.',
-      'I worked on the data pipeline, model fine-tuning and API integration.',
+      'LLM agent with tool use on the Claude API that sorts a research lab’s GitHub issues by category (3D CAD, electrical, paperwork, documentation, software) and severity, and flags duplicates.',
+      'Tested on about 300 closed issues: 78% top-1 and 80% top-3 category accuracy, 97% duplicate detection.',
     ],
-    stack: ['Python', 'R', 'Gemini 2.5 Flash', 'Vertex AI', 'Tableau', 'Power BI'],
+    stack: ['Claude API', 'Tool use', 'LLM evaluation'],
     links: [],
   },
   {
@@ -145,33 +168,18 @@ export const projects = [
     links: [],
   },
   {
-    id: 'vida', code: 'VDA', name: 'VIDA', tagline: 'Medication dispenser prototype', when: '2026 to now', context: 'Hardware prototype', kind: 'progress', badge: 'In progress',
-    points: [
-      'Tabletop pill dispenser with ESP32 firmware and a Raspberry Pi 5 host, I2C sensors, a load cell, and stepper and servo motors.',
-      'Wrote the hardware build plan and software spec.',
-    ],
-    stack: ['ESP32', 'Raspberry Pi 5', 'I2C', 'Stepper + servo'],
-    links: [],
-  },
-  {
-    id: 'nsbe', code: 'NSB', name: 'USF NSBE Website', tagline: 'Chapter site for 300+ members', when: 'Jan 2025 to now', context: 'NSBE at USF', kind: 'live', badge: 'Live', image: 'nsbe',
-    points: ['Led a 2-person team building the site for a 300+ member chapter, with continuous deployment on Vercel.'],
-    stack: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
-    links: [{ label: 'usfnsbe.com', href: 'https://www.usfnsbe.com/' }, { label: 'GitHub', href: 'https://github.com/MarioSinclair/NSBE-LandingPage' }],
-  },
-  {
-    id: 'memecrafter', code: 'MEM', name: 'MemeCrafter', tagline: 'Multimodal caption generator', when: 'Fall 2025', context: 'With Lovesh Kumar', kind: 'build', badge: 'ML',
-    points: ['Multimodal meme caption generator built with teammate Lovesh Kumar: EasyOCR + BLIP-2 + GPT-2 with LoRA fine-tuning.'],
-    stack: ['EasyOCR', 'BLIP-2', 'GPT-2', 'LoRA'],
-    links: [],
-  },
-  {
     id: 'optionscope', code: 'OPT', name: 'OptionScope', tagline: 'Options pricing tool', when: 'May 2025 to now', context: 'Personal project', kind: 'build', badge: 'Side project',
     points: [
       'Black-Scholes pricing with Greeks visualizations (Python, FastAPI/Flask, NumPy, React, Chart.js).',
       'Extended with a PySpark job on Databricks that ingests daily market data and computes prices and Greeks, scheduled by an Apache Airflow DAG that loads results into SQL.',
     ],
     stack: ['Python', 'FastAPI', 'NumPy', 'React', 'Chart.js', 'PySpark', 'Databricks', 'Airflow'],
+    links: [],
+  },
+  {
+    id: 'memecrafter', code: 'MEM', name: 'MemeCrafter', tagline: 'Multimodal caption generator', when: 'Fall 2025', context: 'With Lovesh Kumar', kind: 'build', badge: 'ML',
+    points: ['Multimodal meme caption generator built with teammate Lovesh Kumar: EasyOCR + BLIP-2 + GPT-2 with LoRA fine-tuning.'],
+    stack: ['EasyOCR', 'BLIP-2', 'GPT-2', 'LoRA'],
     links: [],
   },
 ];
