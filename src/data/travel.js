@@ -13,6 +13,7 @@ export const VISITED = [
   { code: 'BOS', city: 'Boston', country: 'USA', lat: 42.36, lon: -71.01 },
   { code: 'PHL', city: 'Philadelphia', country: 'USA', lat: 39.87, lon: -75.24 },
   { code: 'ORD', city: 'Chicago', country: 'USA', lat: 41.98, lon: -87.90 },
+  { code: 'IND', city: 'Indianapolis', country: 'USA', lat: 39.72, lon: -86.29 },
   { code: 'ATL', city: 'Atlanta', country: 'USA', lat: 33.64, lon: -84.43 },
   { code: 'MIA', city: 'Miami', country: 'USA', lat: 25.79, lon: -80.29 },
   { code: 'MSY', city: 'New Orleans', country: 'USA', lat: 29.99, lon: -90.26 },

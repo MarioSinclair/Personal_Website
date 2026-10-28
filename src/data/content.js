@@ -28,7 +28,7 @@ export const profile = {
   interests: [
     { label: 'Investing', text: 'Company deep dives: free cash flow, DCF models, and checking guidance against the numbers.' },
     { label: 'Robotics', text: 'Autonomous navigation, from costmaps to SLAM.' },
-    { label: 'Travel', text: 'Sixteen cities so far, with three more booked.' },
+    { label: 'Travel', text: 'Seventeen cities so far, with three more booked.' },
     { label: 'Food', text: 'Eating my way through every city I visit.' },
   ],
 };
