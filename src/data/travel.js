@@ -20,12 +20,12 @@ export const VISITED = [
   { code: 'BNA', city: 'Nashville', country: 'USA', lat: 36.13, lon: -86.68 },
   { code: 'STL', city: 'St. Louis', country: 'USA', lat: 38.75, lon: -90.37 },
   { code: 'LAS', city: 'Las Vegas', country: 'USA', lat: 36.08, lon: -115.15 },
+  { code: 'SLC', city: 'Salt Lake City', country: 'USA', lat: 40.79, lon: -111.98 },
   { code: 'LAX', city: 'Los Angeles', country: 'USA', lat: 33.94, lon: -118.41 },
   { code: 'PDX', city: 'Portland', country: 'USA', lat: 45.59, lon: -122.6, },
 ];
 
 export const UPCOMING = [
-  { code: 'SLC', city: 'Salt Lake City', country: 'USA', lat: 40.79, lon: -111.98, when: 'Fall 2026' },
   { code: 'PWM', city: 'Portland, Maine', country: 'USA', lat: 43.65, lon: -70.31, when: 'Fall 2026' },
   { code: 'ICN', city: 'South Korea', country: 'South Korea', lat: 37.46, lon: 126.44, when: 'Winter 2026' },
 ];
